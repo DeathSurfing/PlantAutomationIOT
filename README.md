@@ -26,3 +26,15 @@ A0: Analog Pin on ESP8266 (A0) or Arduino
 2. Setup the Code for ESP8266:
 You will need the ESP8266WiFi library to connect to your WiFi network and the IFTTT Webhooks to trigger an action (like sending a notification) when soil moisture falls below a certain level.
 
+3. In the include make a config.h file with the following attributes:
+```
+#ifndef CONFIG_H
+#define CONFIG_H
+
+const char* ssid = "your_SSID";
+const char* password = "your_PASSWORD";
+const String iftttKey = "your_IFTTT_key";
+const String eventName = "soil_moisture_alert";
+
+#endif
+```
